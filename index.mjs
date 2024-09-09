@@ -1,7 +1,7 @@
 import express from "express"
+import bodyParser from "body-parser"
 import dotenv from "dotenv"
 import mongoose from "mongoose"
-import bodyParser from "body-parser"
 import userRoute from "./users/userRoute/userRoute.mjs"
 
 const app = express()
