@@ -31,6 +31,7 @@ const userModel = mongoose.Schema({
   },
   dateOfBirth: {
     type: Date,
+    default: Date.now,
   },
   location: {
     type: String,
