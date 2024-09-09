@@ -8,7 +8,7 @@ import {
 const userRoute = express.Router()
 
 userRoute.post("/create-user", create_user)
-userRoute.post("/get-users", get_users)
-userRoute.post("/get-user/:id", get_user)
+userRoute.get("/get-users", get_users)
+userRoute.get("/get-user/:id", get_user)
 
 export default userRoute
