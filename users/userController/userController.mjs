@@ -3,8 +3,8 @@ import userModel from "../userModel/userModel.mjs"
 export const create_user = async (req, res) => {
   try {
     const user = new userModel(req.body)
-    const userName = await userModel.findByOne({ username: req.body.username })
-    const userEmail = await userModel.findByOne({ email: req.body.email })
+    const userName = await userModel.findOne({ username: req.body.username })
+    const userEmail = await userModel.findOne({ email: req.body.email })
     if (userName) {
       return res.status(400).json({ message: "Username already exists" })
     } else if (userEmail) {
